@@ -1,0 +1,8 @@
+%h1 Projects
+.row.justify-content-end
+  = link_to 'New Project', new_project_url, class: 'btn btn-success mb-3 mr-3 align-self-end'
+= render @projects
+
+= paginate @projects, theme: 'twitter-bootstrap-4',
+                   pagination_class: "pagination-sm",
+                   nav_class: "d-inline-b"

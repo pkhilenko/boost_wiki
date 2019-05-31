@@ -1,0 +1,41 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+AllCops:
+  Exclude:
+    - 'config/initializers/secret_token.rb'
+    - 'app/controllers/admins/*.rb'
+    - 'app/controllers/users/*.rb'
+    - 'app/controllers/admin/setting*.rb'
+    - 'app/models/setting*.rb'
+    - 'bin/**/*'
+    - 'config/initializers/simple_form*.rb'
+    - 'config/initializers/devise.rb'
+    - 'config/environments/*.rb'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+  TargetRubyVersion: 2.6
+  DisplayCopNames: true
+
+Metrics/LineLength:
+  Max: 120
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
