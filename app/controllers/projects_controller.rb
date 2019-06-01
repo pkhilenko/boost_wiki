@@ -1,8 +1,8 @@
 class ProjectsController < ApplicationController
-  before_action :load_model, only: [:edit, :update, :destroy]
+  before_action :find_resource, only: [:edit, :update, :destroy]
 
   def index
-    @projects = Project.all.page(params[:page])
+    @projects = Project.all.page(params[:page]).per(5)
   end
 
   def new
@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
      params.require(:project).permit(:title, :image)
    end
 
-   def load_model
+   def find_resource
      @project = Project.find(params[:id])
    end
 end
