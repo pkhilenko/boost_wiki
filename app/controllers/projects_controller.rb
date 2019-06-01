@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :find_resource, only: [:edit, :update, :destroy]
 
   def index
-    @projects = Project.all.page(params[:page]).per(5)
+    @projects = Project.all.page(params[:page]).per(per_page)
   end
 
   def new
