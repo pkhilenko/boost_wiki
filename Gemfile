@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.3'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap4-kaminari-views'
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'hamlit-rails', '~> 0.2.3'
 gem 'html2haml', '~> 2.2'
